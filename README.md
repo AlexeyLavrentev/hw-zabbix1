@@ -49,6 +49,7 @@ sudo systemctl enable zabbix-server zabbix-agent apache2
 sudo systemctl restart zabbix-server zabbix-agent apache2
 
 ### Редактирование файла README.md, коммит и git push
+git add 
 git commit -m "update README.md"
 git push origin main
 
@@ -67,9 +68,40 @@ git push origin main
 Приложите в файл README.md скриншот раздела Monitoring > Latest data для обоих хостов, где видны поступающие от агентов данные.
 Приложите в файл README.md текст использованных команд в GitHub
 
+### Выполнение:
+### Скриншот Configuration - Hosts
+<img width="1906" height="624" alt="image" src="https://github.com/user-attachments/assets/92382e20-2692-485a-94e4-43dd385baadc" />
+### Скриншот Monitoring - Latest data
+<img width="1895" height="1003" alt="image" src="https://github.com/user-attachments/assets/10cc7b9a-f148-4c59-94c6-f19c8c314b52" />
+
+### Использованные команды
+
+### Настройка агента на сервере
+sudo nano /etc/zabbix/zabbix_agentd.conf
+sudo systemctl enable zabbix-agent
+sudo systemctl restart zabbix-agent
+
+### Установка и настройка агента на втором хосте
+sudo apt install -y zabbix-agent
+sudo nano /etc/zabbix/zabbix_agentd.conf
+sudo systemctl enable zabbix-agent
+sudo systemctl restart zabbix-agent
+
+### Редактирование файла README.md, коммит и git push
+git add 
+git commit -m "update README.md"
+git push origin main
+
 ### Задание 3 со звёздочкой*
 Установите Zabbix Agent на Windows (компьютер) и подключите его к серверу Zabbix.
 
 Требования к результатам
 Приложите в файл README.md скриншот раздела Latest Data, где видно свободное место на диске C:
+
+### Выполнение:
+### Скриншот добавленного хоста wondows
+<img width="1906" height="643" alt="image" src="https://github.com/user-attachments/assets/636603dd-8cf4-48be-97be-77d288164a52" />
+
+### Скриншот свободного места на диске C:
+<img width="1896" height="777" alt="image" src="https://github.com/user-attachments/assets/94595708-c0ed-4897-9e42-3d025a614104" />
 
